@@ -25,7 +25,7 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function CountDownProvider({children} : CountDownProviderProps){
 
-    const [time, setTime] = useState(0.1 * 60);
+    const [time, setTime] = useState(25 * 60);
     const [isActive, setIsAvtive] = useState(false)
     const [hasFinish, setHasFinish] = useState(false)
 
@@ -41,7 +41,7 @@ export function CountDownProvider({children} : CountDownProviderProps){
     function resetCountDown() {
         clearTimeout(countdownTimeout)
         setIsAvtive(false)
-        setTime(0.1 * 60)
+        setTime(25 * 60)
         setHasFinish(false)
     }
 
